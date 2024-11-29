@@ -1,0 +1,328 @@
+
+  
+body {
+    background-color: ghostwhite;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+    /* Animate gradient background */
+
+  
+  
+  /* Animate gradient background */
+.motion {
+    width: 400%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 10s linear infinite;
+  }
+  
+@keyframes marquee {
+    from {
+      transform: translateX(200%);
+    }
+    to {
+      transform: translateX(-250%);
+    }
+  }
+
+.motion2 {
+    width: 200%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 17s linear infinite;
+  }
+  
+@keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-150%);
+    }
+  }
+  
+
+ 
+  
+
+ 
+
+
+
+
+
+
+
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+  
+  .textcolor {
+    animation: bounce 1s infinite;
+  }
+  
+  
+
+
+/* Smooth transitions */
+* {
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+/* Header and Navigation styles */
+.one {
+    background: linear-gradient(90deg, #4a90e2, #4285f4);
+    padding: 1.5em 0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    
+    
+
+}
+.one{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; /* Space around the buttons */
+        gap: 10px; /* Space between buttons */
+        padding: 10px;
+        border-radius:6%;
+    }
+    
+    button {
+        flex: 1 1 45%; /* Buttons take 45% of the container width and adjust for smaller screens */
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+
+
+/* Navigation buttons */
+.nav-button {
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 12px 24px;
+    margin: 0 20px;
+    color: #4a90e2;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+    background-color: #4285f4;
+    color: white;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Headings */
+h1, h2, h3 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+h1 {
+    color: #4a90e2;
+    font-size: 2.8em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    animation: fadeIn 1s ease-in-out;
+    letter-spacing: 1.5px;
+}
+
+h2 {
+    color: #4a90e2;
+    font-size: 1.8em;
+    margin: 1.5em 0 0.5em;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #666;
+    margin: 1em 0;
+    font-weight: 300;
+}
+
+/* Content container */
+.content {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+    padding: 1.5em;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Image styling with animation */
+.application1 {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin-top: 1.2em;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    animation: slideUp 0.8s forwards ease-in-out;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 1.2em;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    animation: slideUp 0.8s forwards ease-in-out;
+}
+
+/* Bullet points */
+.keys p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6em;
+    margin: 0.5em 0;
+    position: relative;
+    left: -10px;
+    opacity: 0;
+    animation: slideLeft 0.5s forwards ease-in-out;
+    padding-left: 20px;
+}
+
+.keys p::before {
+    content: "•";
+    color: #4a90e2;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 2em;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Applying animations to specific classes */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.slide-up {
+    opacity: 0;
+    animation: slideUp 0.8s forwards ease-in-out;
+}
+
+.slide-left {
+    opacity: 0;
+    animation: slideLeft 0.5s forwards ease-in-out;
+}
+
+/* Special Page Styling */
+ul {
+    padding-left: 20px;
+    font-size: 1.1em;
+}
+
+ul li {
+    margin-bottom: 0.5em;
+}
+
+/* Buttons for viewing AR models */
+button {
+    background-color: #4a90e2;
+    border: none;
+    padding: 12px 24px;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #4285f4;
+    color: white;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Page specific styles for navigation bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #4a90e2;
+}
+
+.navbar a:hover {
+    color: #4285f4;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2em;
+    }
+
+    .nav-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .content {
+        padding: 1em;
+    }
+
+    .keys p {
+        font-size: 0.9em;
+    }
+}
